@@ -1,1 +1,118 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffa500;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #resume iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.content');
+            pages.forEach(page => page.classList.add('hidden'));
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Professional Website</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('main')">Main</a>
+        <a href="#" onclick="showPage('resume')">Resume</a>
+        <a href="#" onclick="showPage('other')">Other</a>
+    </nav>
+
+    <div id="main" class="content">
+        <h2>Welcome</h2>
+        <p>This is the main page of the website. Add your content here to introduce yourself or your professional work.</p>
+    </div>
+
+    <div id="resume" class="content hidden">
+        <h2>Resume</h2>
+        <iframe src="content/resume.pdf"></iframe>
+    </div>
+
+    <div id="other" class="content hidden">
+        <h2>Other</h2>
+        <p>This page can include additional content, such as links to projects, publications, or other professional information.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Professional Website</p>
+    </footer>
+</body>
+</html>
