@@ -76,12 +76,6 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
-    .option {
-        width: 45%; /* Set percentage width to allow wrapping */
-    }
-}
-
 @media (max-width: 600px) {
     .option {
         width: 100%; /* Full width for small screens */
