@@ -1,7 +1,8 @@
 {
     "general": {
-        "copyright": "Copyright 2025 - Autumn Leaves",
         "welcomeLink": "<a href \"https://github.maddiemeyers.com/website-autumnleaves\">\"Click to goto Option Page\"</a>"
+        "header": "Autumn Leaves' Website",
+        "footer": "Copyright 2025 - Autumn Leaves"
     },
     "technology": {
         "components": {
