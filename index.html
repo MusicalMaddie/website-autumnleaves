@@ -36,7 +36,7 @@
             window.location.href = `./${option}/`; /* Navigate to the default page */
         }
         function scaleIframeContent(iframeSelector, scale) {
-            const iframe = document.querySelector(iframeSelector);
+            const iframe = document.querySelectorAll(iframeSelector);
         
             iframe.onload = () => {
               const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
