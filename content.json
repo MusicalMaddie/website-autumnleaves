@@ -1,0 +1,22 @@
+{
+    "option1": {
+        "art": {
+            "title": "Option 1 - Art",
+            "content": "Welcome to the Art page in Option 1. This page showcases artistic content for this option."
+        },
+        "tech": {
+            "title": "Option 1 - Technology",
+            "content": "Welcome to the Technology page in Option 1. Explore tech-related content here."
+        }
+    },
+    "option2": {
+        "art": {
+            "title": "Option 2 - Art",
+            "content": "Welcome to the Art page in Option 2. This page highlights the creativity of this option."
+        },
+        "tech": {
+            "title": "Option 2 - Technology",
+            "content": "Welcome to the Technology page in Option 2. Delve into tech topics for this option."
+        }
+    }
+}
