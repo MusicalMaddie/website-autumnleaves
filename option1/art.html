@@ -62,16 +62,40 @@
                 window.location.href = page;
             }, 300);
         }
+        async function loadContent() {
+            try {
+                // Fetch the JSON content
+                const response = await fetch('../content.json');
+                const data = await response.json();
+
+                // Populate shared content from 'general'
+                const general = data.general;
+                document.getElementById('copyright').innerText = general.copyright;
+
+                // Populate page-specific content from 'art'
+                const artComponents = data.art.components;
+                document.getElementById('heading').innerText = artComponents.heading;
+                document.getElementById('subheading').innerText = artComponents.subheading;
+                document.getElementById('body').innerText = artComponents.body;
+            } catch (error) {
+                console.error("Error loading content:", error);
+            }
+        }
+        window.onload = loadContent;
     </script>
 </head>
-<body style="opacity: 1; transition: opacity 0.3s;">
+<body>
     <div class="header">
-        <div class="tab inactive" onclick="navigate('tech.html')">Technology</div>
-        <div class="tab active" onclick="navigate('art.html')">Art</div>
+        <div class="tab inactive" onclick="location.href='../option1/technology.html'">Technology</div>
+        <div class="tab active">Art</div>
     </div>
     <div class="content">
-        <h1>Welcome to the Art Page</h1>
-        <p>This is the content for the Art page.</p>
+        <h1 id="heading"></h1>
+        <h2 id="subheading"></h2>
+        <p id="body"></p>
     </div>
+    <footer>
+        <p id="copyright"></p>
+    </footer>
 </body>
 </html>
