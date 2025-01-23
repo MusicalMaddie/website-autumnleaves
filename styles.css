@@ -45,7 +45,7 @@ body {
     width: 100%; /* Define the width of the preview box */
     height: 100%; /* Define the height of the preview box */
     overflow: hidden; /* Crop any overflow caused by scaling */
-    border: noe;
+    border: none;
 }
 
 .iframe-preview {
