@@ -8,30 +8,38 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #fff5f5; /* Subtle Pink Background for Art Page */
         }
         .header {
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 60px;
-            background-color: #333;
-            color: white;
+            background-color: #fff5f5; /* Match the background of Art Page */
+            border-bottom: 1px solid #ddd; /* Subtle divider for header */
         }
         .tab {
             flex: 1;
             text-align: center;
             padding: 10px;
-            background-color: #444;
-            margin: 5px;
-            border-radius: 15px;
+            margin: 0;
+            border-radius: 15px 15px 0 0;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
         .tab:hover {
-            background-color: #555;
+            background-color: #ffecec;
         }
         .active {
-            background-color: #666;
+            background-color: #fff5f5; /* Active tab blends with page */
+            color: black;
+            border-bottom: 2px solid #fff5f5; /* Seamlessly blends */
+            font-weight: bold;
+        }
+        .inactive {
+            background-color: #f8f8f8;
+            color: gray;
+        }
+        .content {
+            padding: 20px;
         }
     </style>
     <script>
@@ -45,7 +53,7 @@
 </head>
 <body style="opacity: 1; transition: opacity 0.3s;">
     <div class="header">
-        <div class="tab" onclick="navigate('index.html')">Technology</div>
+        <div class="tab inactive" onclick="navigate('index.html')">Technology</div>
         <div class="tab active" onclick="navigate('art.html')">Art</div>
     </div>
     <div class="content">
