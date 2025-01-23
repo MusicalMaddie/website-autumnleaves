@@ -54,6 +54,8 @@ body {
     left: 0;
     width: 100%; /* Make the iframe fully cover its container */
     height: 100%; /* Make the iframe fully cover its container */
+    transform: scale(0.5); /* Adjust scaling factor as needed */
+    transform-origin: 0 0; /* Scale from the top-left corner */
     border: none; /* Remove any default iframe border */
     pointer-events: none; /* Disable interaction inside the iframe */
     overflow: hidden;
