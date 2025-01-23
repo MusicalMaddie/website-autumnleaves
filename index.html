@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Version 6 -->
+    <!-- Version 7 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
@@ -36,19 +36,21 @@
             window.location.href = `./${option}/`; /* Navigate to the default page */
         }
         function scaleIframeContent(iframeSelector, scale) {
-            const iframe = document.querySelectorAll(iframeSelector);
-        
-            iframe.onload = () => {
-              const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        
-              if (iframeDocument) {
-                iframeDocument.body.style.transform = `scale(${scale})`;
-                iframeDocument.body.style.transformOrigin = "0 0";
-                iframeDocument.body.style.width = `${100 / scale}%`;
-                iframeDocument.body.style.height = `${100 / scale}%`;
-              }
-            };
-          }
+            const iframes = document.querySelectorAll(iframeSelector); // Select all matching elements
+    
+            iframes.forEach((iframe) => {
+                iframe.onload = () => {
+                    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    
+                    if (iframeDocument) {
+                        iframeDocument.body.style.transform = `scale(${scale})`;
+                        iframeDocument.body.style.transformOrigin = "0 0";
+                        iframeDocument.body.style.width = `${100 / scale}%`;
+                        iframeDocument.body.style.height = `${100 / scale}%`;
+                    }
+                };
+            });
+        }
       scaleIframeContent(".iframe-preview", 0.5); // Example: scale content to 50%
     </script>
 </body>
