@@ -8,30 +8,31 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #F2D2BD; /* Subtle Pink Background for Art Page */
+            background-color: #e0e0e0; /* Grey background behind tabs */
         }
         .header {
             display: flex;
             height: 60px;
-            background-color: #F2D2BD; /* Match the background of Art Page */
-            border-bottom: 1px solid #ddd; /* Subtle divider for header */
+            background-color: #e0e0e0; /* Grey background behind tabs */
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 0;
         }
         .tab {
             flex: 1;
             text-align: center;
             padding: 10px;
-            margin: 0;
+            margin: 0 5px;
             border-radius: 15px 15px 0 0;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
         .tab:hover {
-            background-color: #ffecec;
+            background-color: #ffd5d5;
         }
         .active {
-            background-color: #F2D2BD; /* Active tab blends with page */
+            background-color: #ff9999; /* Stronger pink for active Art tab */
             color: black;
-            border-bottom: 2px solid #F2D2BD; /* Seamlessly blends */
             font-weight: bold;
         }
         .inactive {
@@ -39,7 +40,9 @@
             color: gray;
         }
         .content {
+            background-color: #ff9999; /* Stronger pink for Art page */
             padding: 20px;
+            border-radius: 0 15px 15px 15px; /* Seamless blending with tabs */
         }
     </style>
     <script>
