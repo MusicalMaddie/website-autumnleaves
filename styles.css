@@ -42,10 +42,10 @@ body {
 
 .iframe-preview-wrapper {
     position: relative;
-    width: 300px; /* Define the width of the preview box */
-    height: 200px; /* Define the height of the preview box */
+    width: 100%; /* Define the width of the preview box */
+    height: 100%; /* Define the height of the preview box */
     overflow: hidden; /* Crop any overflow caused by scaling */
-    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+    border: noe;
 }
 
 .iframe-preview {
