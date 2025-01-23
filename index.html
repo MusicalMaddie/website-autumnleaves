@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            background-color: #333;
+            color: white;
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #444;
+            margin: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #555;
+        }
+        .active {
+            background-color: #666;
+        }
+    </style>
+    <script>
+        function navigate(page) {
+            document.body.style.opacity = 0;
+            setTimeout(() => {
+                window.location.href = page;
+            }, 300);
+        }
+    </script>
+</head>
+<body style="opacity: 1; transition: opacity 0.3s;">
+    <div class="header">
+        <div class="tab active" onclick="navigate('index.html')">Technology</div>
+        <div class="tab" onclick="navigate('art.html')">Art</div>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Technology Page</h1>
+        <p>This is the content for the Technology page.</p>
+    </div>
+</body>
+</html>
