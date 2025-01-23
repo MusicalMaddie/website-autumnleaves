@@ -21,7 +21,9 @@ body {
 .option {
     position: relative;
     width: 200px; /* Default width */
-    height: 200px; /* Default height */
+    height: 200px; /* Default height */'
+    min-width: 150px;
+    min-height: 150px;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -74,13 +76,14 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 800px) {
+    .option {
+        width: 45%; /* Set percentage width to allow wrapping */
+    }
+}
+
 @media (max-width: 600px) {
     .option {
         width: 100%; /* Full width for small screens */
-        height: auto; /* Allow height to adjust */
-        aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
-    }
-    .container {
-        gap: 10px; /* Smaller gaps between items on small screens */
     }
 }
