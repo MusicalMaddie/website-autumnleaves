@@ -10,7 +10,10 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        main {
+            flex: 1;
+            padding: 20px;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -68,9 +71,6 @@
             padding: 10px;
             background: #333;
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
 
         .hidden {
@@ -121,22 +121,22 @@
         <a href="#" onclick="showPage('resume')">Resume</a>
         <a href="#" onclick="showPage('other')">Other</a>
     </nav>
-
-    <div id="main" class="content">
-        <h2>Welcome</h2>
-        <p>This is the main page of the website. Add your content here to introduce yourself or your professional work.</p>
-    </div>
-
-    <div id="resume" class="content hidden">
-        <h2>Resume</h2>
-        <iframe src="../Resume-Autumn_Leaves.pdf"></iframe>
-    </div>
-
-    <div id="other" class="content hidden">
-        <h2>Other</h2>
-        <p>This page can include additional content, such as links to projects, publications, or other professional information.</p>
-    </div>
-
+    <main>
+        <div id="main" class="content">
+            <h2>Welcome</h2>
+            <p>This is the main page of the website. Add your content here to introduce yourself or your professional work.</p>
+        </div>
+    
+        <div id="resume" class="content hidden">
+            <h2>Resume</h2>
+            <iframe src="../Resume-Autumn_Leaves.pdf"></iframe>
+        </div>
+    
+        <div id="other" class="content hidden">
+            <h2>Other</h2>
+            <p>This page can include additional content, such as links to projects, publications, or other professional information.</p>
+        </div>
+    </main>
     <footer>
         <center><p>&copy; 2025 Autumn Leaves</p></center>
     </footer>
