@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autumn Leaves' Website</title>
+    <link rel="stylesheet" href="../option3/styles.css">
+</head>
+<body>
+    <script>
+        fetch('../content.json')
+            .then(response => response.json())
+            .then(data => {
+                // Header section
+                const header = document.createElement('h1');
+                header.textContent = data.general.header;
+                document.body.insertBefore(header, document.body.firstChild);
+
+                // Welcome link container
+                const welcomeContainer = document.createElement('div');
+                welcomeContainer.className = 'container';
+                welcomeContainer.innerHTML = data.general.welcomeLink;
+                document.body.appendChild(welcomeContainer);
+
+                // Technology components
+                const techContainer = document.createElement('div');
+                techContainer.className = 'container';
+                techContainer.innerHTML = `
+                    <h2>${data.technology.components.heading}</h2>
+                    <h3>${data.technology.components.subheading}</h3>
+                    <p>${data.technology.components.body}</p>
+                `;
+                document.body.appendChild(techContainer);
+
+                // Footer section
+                const footer = document.createElement('footer');
+                footer.innerHTML = data.general.footer;
+                document.body.appendChild(footer);
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
+</body>
+</html>
