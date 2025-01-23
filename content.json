@@ -1,22 +1,19 @@
 {
-    "option1": {
-        "art": {
-            "title": "Option 1 - Art",
-            "content": "Welcome to the Art page in Option 1. This page showcases artistic content for this option."
-        },
-        "tech": {
-            "title": "Option 1 - Technology",
-            "content": "Welcome to the Technology page in Option 1. Explore tech-related content here."
+    "general": {
+        "copyright": "Copyright 2025 - Autumn Leaves"
+    },
+    "technology": {
+        "components": {
+            "heading": "Hello! I'm Autumn Leaves",
+            "subheading": "I'm an IT professional working at a biotech startup in Cambridge, MA",
+            "body": "This is an example body text for the technology page."
         }
     },
-    "option2": {
-        "art": {
-            "title": "Option 2 - Art",
-            "content": "Welcome to the Art page in Option 2. This page highlights the creativity of this option."
-        },
-        "tech": {
-            "title": "Option 2 - Technology",
-            "content": "Welcome to the Technology page in Option 2. Delve into tech topics for this option."
+    "art": {
+        "components": {
+            "heading": "Welcome to the Art Page",
+            "subheading": "Explore the world of creativity and inspiration.",
+            "body": "This is an example body text for the art page."
         }
     }
 }
