@@ -1,1 +1,60 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .option {
+            width: 150px;
+            height: 150px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #d0d0d0;
+            transform: scale(1.05);
+        }
+        .option span {
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Option 1 -->
+        <div class="option" onclick="navigateTo('option1')">
+            <span>Option 1</span>
+        </div>
+        <!-- Option 2 -->
+        <div class="option" onclick="navigateTo('option2')">
+            <span>Option 2</span>
+        </div>
+    </div>
+    <script>
+        function navigateTo(option) {
+            window.location.href = `./${option}/art.html`; /* Default to the first page of each option */
+        }
+    </script>
+</body>
+</html>
