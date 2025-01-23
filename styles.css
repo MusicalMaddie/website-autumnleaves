@@ -48,6 +48,7 @@ body {
     height: 100%; /* Make the iframe fully cover its container */
     border: none; /* Remove any default iframe border */
     pointer-events: none; /* Disable interaction inside the iframe */
+    overflow: hidden;
 }
 
 .overlay {
