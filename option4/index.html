@@ -56,15 +56,24 @@
     </style>
 </head>
 <body>
-<iframe 
-   src="https://www.youtube.com/embed/iUtnZpzkbG8?autoplay=1&mute=1&loop=1&playlist=iUtnZpzkbG8" 
-   frameborder="0" 
-   allow="autoplay; loop" 
-   style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"
->
-    
-</iframe>
-
+    <iframe 
+        src="https://www.youtube.com/embed/iUtnZpzkbG8?autoplay=1&mute=1&loop=1&playlist=iUtnZpzkbG8&controls=0&modestbranding=1&fs=0" 
+        frameborder="0" 
+        allow="autoplay; loop" 
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw; /* Start with full viewport width */
+            height: 56.25vw; /* 16:9 aspect ratio (9/16 * 100vw) */
+            transform: translate(-50%, -50%); /* Center the iframe */
+            min-width: 177.78vh; /* Ensures it fills the height */
+            min-height: 100vh; /* Ensures it fills the width */
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        "
+    ></iframe>
     <div class="content">
         <h1>Autumn Leaves</h1>
         <div class="buttons">
