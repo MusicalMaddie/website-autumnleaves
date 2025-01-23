@@ -28,7 +28,17 @@
             transition: background-color 0.3s, color 0.3s;
         }
         .tab:hover {
-            background-color: #ffd5d5;
+            background-color: #ffd5d5; /* Default hover for any tab */
+        }
+        
+        /* Technology tab hover when inactive */
+        .tab.inactive:hover {
+            background-color: #f0f0f0; /* Light gray hover for Technology tab */
+        }
+        
+        /* Art tab hover when active */
+        .tab.active:hover {
+            background-color: #ff9999; /* No change for Art tab when active */
         }
         .active {
             background-color: #ff9999; /* Active tab blends with Art page */
