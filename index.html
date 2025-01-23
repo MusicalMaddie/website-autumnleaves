@@ -35,6 +35,21 @@
         function navigateTo(option) {
             window.location.href = `./${option}/`; /* Navigate to the default page */
         }
+        function scaleIframeContent(iframeSelector, scale) {
+            const iframe = document.querySelector(iframeSelector);
+        
+            iframe.onload = () => {
+              const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        
+              if (iframeDocument) {
+                iframeDocument.body.style.transform = `scale(${scale})`;
+                iframeDocument.body.style.transformOrigin = "0 0";
+                iframeDocument.body.style.width = `${100 / scale}%`;
+                iframeDocument.body.style.height = `${100 / scale}%`;
+              }
+            };
+          }
+      scaleIframeContent(".iframe-preview", 0.5); // Example: scale content to 50%
     </script>
 </body>
 </html>
