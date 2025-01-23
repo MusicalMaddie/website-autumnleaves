@@ -78,7 +78,7 @@
                 document.getElementById('subheading').innerText = techComponents.subheading;
                 document.getElementById('body').innerText = techComponents.body;
             } catch (error) {
-                console.error(error);
+                console.error("Error loading content:", error);
             }
         }
         window.onload = loadContent;
