@@ -1,1 +1,105 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Tabs Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      width: 200px;
+      background-color: #f4f4f4;
+      border-right: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .tab {
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab:hover {
+      background-color: #e0e0e0;
+    }
+
+    .tab.active {
+      background-color: #d9edf7;
+      font-weight: bold;
+    }
+
+    /* Content styles */
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="tab active" data-tab="main">Main</div>
+    <div class="tab" data-tab="resume">Resume</div>
+    <div class="tab" data-tab="other1">Other1</div>
+    <div class="tab" data-tab="other2">Other2</div>
+    <div class="tab" data-tab="other3">Other3</div>
+  </div>
+
+  <div class="content">
+    <div class="content-section active" id="main">
+      <h1>Main</h1>
+      <p>Welcome to the Main tab!</p>
+    </div>
+    <div class="content-section" id="resume">
+      <h1>Resume</h1>
+      <p>Here is the Resume content.</p>
+    </div>
+    <div class="content-section" id="other1">
+      <h1>Other1</h1>
+      <p>This is Other1 content.</p>
+    </div>
+    <div class="content-section" id="other2">
+      <h1>Other2</h1>
+      <p>This is Other2 content.</p>
+    </div>
+    <div class="content-section" id="other3">
+      <h1>Other3</h1>
+      <p>This is Other3 content.</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.content-section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs and sections
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(section => section.classList.remove('active'));
+
+        // Add active class to the clicked tab and corresponding section
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
