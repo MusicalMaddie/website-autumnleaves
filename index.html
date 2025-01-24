@@ -50,7 +50,7 @@
             window.location.href = `./${option}/`; /* Navigate to the default page */
         }
         function scaleIframeContent(iframeSelector, scale) {
-            const iframes = document.querySelectorAll(iframeSelector); // Select all matching elements
+            const iframes = document.querySelectorAll(iframeSelector); // Select all matching option boxes
     
             iframes.forEach((iframe) => {
                 iframe.onload = () => {
@@ -65,7 +65,7 @@
                 };
             });
         }
-      scaleIframeContent(".iframe-preview", 0.3); // Example: scale content to 50%
+      scaleIframeContent(".iframe-preview", 1); // Example: scale content to 50%
     </script>
 </body>
 </html>
