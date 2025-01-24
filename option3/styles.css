@@ -34,9 +34,10 @@ body {
 
 img.headshot {
     max-width: 100%;
-    width: 500px;
+    display: flex;
+    align-items: center;
+    width: 350px;
     height: auto;
-    display: block;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
