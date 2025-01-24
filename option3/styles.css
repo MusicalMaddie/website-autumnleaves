@@ -25,6 +25,13 @@ body {
     text-align: center;
 }
 
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
 footer {
     margin-top: 20px;
     padding: 10px 0;
