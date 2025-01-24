@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   height: 100vh;
+  min-height: 800px;
   color: #333;
 }
 
