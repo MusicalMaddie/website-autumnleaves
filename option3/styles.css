@@ -32,6 +32,13 @@ body {
     margin: auto;
 }
 
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 img.headshot {
     max-width: 100%;
     display: flex;
