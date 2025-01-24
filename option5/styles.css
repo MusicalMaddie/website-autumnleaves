@@ -7,6 +7,17 @@ body {
   color: #333;
 }
 
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e0e0e0
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  margin-top: auto;
+}
+
 /* Sidebar styles */
 .sidebar {
   width: 200px;
