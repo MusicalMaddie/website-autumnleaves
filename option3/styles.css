@@ -25,6 +25,22 @@ body {
     text-align: center;
 }
 
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+img.headshot {
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
 footer {
     margin-top: 20px;
     padding: 10px 0;
