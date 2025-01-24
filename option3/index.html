@@ -48,7 +48,7 @@
         const certificationsPath = '../content/certifications/';
 
         // Generate filenames dynamically in a loop for both png and jpeg files
-        for (let i = 1; i <= 10; i++) { // Adjust 10 to the maximum number of certifications
+        for (let i = 1; i <= 22; i++) { // Adjust 10 to the maximum number of certifications
             ["png", "jpeg"].forEach(ext => {
                 const img = document.createElement('img');
                 img.src = `${certificationsPath}certification${i}.${ext}`;
