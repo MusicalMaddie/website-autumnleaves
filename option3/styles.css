@@ -33,8 +33,11 @@ body {
 }
 
 img.headshot {
-    max-width: 500px;
-    border-radius: 15px;
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
