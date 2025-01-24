@@ -47,17 +47,13 @@
         const certificationsContainer = document.getElementById('certifications');
         const certificationsPath = '../content/certifications/';
 
-        // List of image filenames (adjust dynamically if needed)
-        const certificationImages = [
-            'cert1.png', 'cert2.jpg', 'cert3.png', 'cert4.jpg'
-        ];
-
-        certificationImages.forEach(image => {
+        // Generate filenames dynamically in a loop
+        for (let i = 1; i <= 10; i++) { // Adjust 10 to the number of certifications you have
             const img = document.createElement('img');
-            img.src = certificationsPath + image;
-            img.alt = `Certification ${image}`;
+            img.src = `${certificationsPath}certification${i}.png`;
+            img.alt = `Certification ${i}`;
             certificationsContainer.appendChild(img);
-        });
+        }
     </script>
 </body>
 </html>
