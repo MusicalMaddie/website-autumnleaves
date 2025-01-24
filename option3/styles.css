@@ -1,6 +1,6 @@
 h1   {
     test-align: center;
-    display: flex;
+    margin: auto;
     align-items: center;
 }
 
