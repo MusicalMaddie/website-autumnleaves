@@ -27,6 +27,12 @@
         <iframe src="../Resume-Autumn_Leaves.pdf" width="100%" height="500px" style="border: none; border-radius: 10px;"></iframe>
     </div>
 
+    <!-- Certifications Container -->
+    <div class="container">
+        <h2>Certifications</h2>
+        <div class="certifications-container" id="certifications"></div>
+    </div>
+    
     <!-- Other Container -->
     <div class="container">
         <h2>Other</h2>
@@ -37,5 +43,21 @@
     <footer>
         <p>Copyright 2025 - Autumn Leaves</p>
     </footer>
+    <script>
+        const certificationsContainer = document.getElementById('certifications');
+        const certificationsPath = '../content/certifications/';
+
+        // List of image filenames (adjust dynamically if needed)
+        const certificationImages = [
+            'cert1.png', 'cert2.jpg', 'cert3.png', 'cert4.jpg'
+        ];
+
+        certificationImages.forEach(image => {
+            const img = document.createElement('img');
+            img.src = certificationsPath + image;
+            img.alt = `Certification ${image}`;
+            certificationsContainer.appendChild(img);
+        });
+    </script>
 </body>
 </html>
